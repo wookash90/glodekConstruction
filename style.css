@@ -11,6 +11,7 @@
 
 html {
     box-sizing: border-box;
+    display: flex;
 }
 
 body {
@@ -24,21 +25,25 @@ body {
     background-position: 70% 85%;
     background-attachment: fixed;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .content {
     display: flex;
-    text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
-.container {
-    background-color: rgba(0, 0, 0, 0.3);
+.openingPage {
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
-    margin: 5%;
-    width: 40%;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10%;
 }
 
 /* Navigation */
@@ -46,20 +51,14 @@ body {
 .nav {
     position: fixed;
     background: var(--navBackground);
+    width: 100vw;
+    margin: auto;
 }
 
 .navBar {
-    display: flex;
     float: right;
-    padding: 15px;
-}
-
-.division {
-    background-color: var(--navBackground);
-    height: 2px;
-    width: 100vw;
-    display: flex;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    padding: 3px;
+    margin: auto;
 }
 
 button {
@@ -88,13 +87,10 @@ button:active {
 
 /* Image */
 
-img {
-    width: 100%;
-    height: 100%;
-    width: 350px;
-    height: 350px;
-    margin-top: 10%;
-    margin-bottom: 5%;
+.openingPage img {
+    width: 300px;
+    height: 300px;
+    margin: 7% 0 7% 0;
     border-radius: 5px;
     background-color: rgba(44, 62, 80, 0.9);
 }
@@ -105,48 +101,70 @@ img {
     background-color: whitesmoke;
     height: 0.5px;
     width: 90%;
-    margin-top: 10px;
+    margin: auto;
 }
 
 /* Birmingham Builders */
 
 .text {
-    padding: 20px;
-    font-size: 35px;
+    margin: 5% 0 2% 0;
+    font-size: 27px;
 }
 
 /* Paragraph */
 
 .paragraph {
-    padding-bottom: 20px;
-    font-size: 18px;   
+    margin: 0 0 5% 0;
+    font-size: 17px;   
 }
 
 /* Find out more */
 
 .findOutMore button {
     width: 130px;
-    height: 50px;
+    height: 30px;
     font-family: Cormorant Garamond, sans-serif;
-    font-size: 19px;
+    font-size: 17px;
+    margin-bottom: 5%;
+}
+
+/* Our Work Page */
+.ourWorkPage {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
+    display: column;
+    float: left;
+    margin-top: 3%;
+    padding: 10px;
+    width: 1100px;
+    height: 630px;
+}
+
+.ourWorkPage img {
+    height: 100px;
+    width: 100px;
+}
+
+.ourWorkPage li {
+    
 }
 
 /* MEDIA QUERY: SMARTPHONE */
 
 @media screen and (max-width: 600px) {
     
-    img {
+    .openingPage img {
         width: 250px;
         height: 250px;
     }
 
-    .container {
+    .openingPage {
         width: 80%;
-        margin-top: 20%;
     }
 
     .text {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .paragraph {
@@ -158,24 +176,23 @@ img {
     }
 }
 
-@media screen and (min-width: 601px) and  (max-width: 1200px) {
+@media screen and (min-width: 601px) and  (max-width: 800px) {
     
-    img {
-        width: 400px;
-        height: 400px;
+    .openingPage img {
+        width: 250px;
+        height: 250px;
     }
 
-    .container {
+    .openingPage {
         width: 80%;
-        margin-top: 20%;
     }
 
     .text {
-        font-size: 40px;
+        font-size: 27px;
     }
 
     .paragraph {
-        font-size: 20px;
+        font-size: 17px;
     }
 }
 
