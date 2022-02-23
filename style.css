@@ -21,10 +21,11 @@ body {
     font-family: Cormorant Garamond, sans-serif;
     color: whitesmoke;
     background: url("./img/background/background1.JPG");
+    background-color: black;
     background-size: cover;
     background-position: 70% 85%;
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -128,29 +129,64 @@ button:active {
     margin-bottom: 5%;
 }
 
-/* Our Work Page */
+/* Our Work Page __________________________________________________________*/
 .ourWorkPage {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
-    display: column;
-    float: left;
-    margin-top: 3%;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.7);
+    margin-top: auto;
+    padding: 50px;
+    width: 550px;
+    height: auto;
+}
+
+.leftcol {
+    float: left; 
+    width: 20%;
+}
+
+.leftcol img {
+    height: 130px;
+    width: 130px;
     padding: 10px;
-    width: 1100px;
-    height: 630px;
+    border-radius: 20px;
 }
 
-.ourWorkPage img {
-    height: 100px;
-    width: 100px;
+.rightcol {
+    float: left;
+    width: 80%;
+    font-size: 27px;
+    padding-top: 50px;
 }
 
-.ourWorkPage li {
-    
+.clear {
+    clear: both;
+    display: block;
 }
 
-/* MEDIA QUERY: SMARTPHONE */
+.free-quote {
+    margin-top: 60px;
+    font-size: 25px;
+    float: right;
+}
+
+.free-quote button {
+    width: 300px;
+    height: 80px;
+    font-size: 23px;
+}
+
+.thumbnail:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:400px;
+    height:auto;
+    display:block;
+    transition: all .3s ease-in-out;
+}
+
+/* MEDIA QUERY: SMARTPHONE _______________________________________________*/
 
 @media screen and (max-width: 600px) {
     
@@ -174,6 +210,29 @@ button:active {
     body {
         background-position: 70%;
     }
+
+    /* Our work page */
+
+    .ourWorkPage {
+        width: 90%;
+    }
+
+    .rightcol {
+        font-size: 15px; 
+        padding-top: 10px;   
+    }
+
+    .leftcol img {
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+    }
+
+    .free-quote button {
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 601px) and  (max-width: 800px) {
@@ -192,6 +251,29 @@ button:active {
     }
 
     .paragraph {
+        font-size: 17px;
+    }
+
+    /* Our work page */
+
+    .ourWorkPage {
+        width: 90%;
+    }
+
+    .rightcol {
+        font-size: 17px;
+        padding-top: 25px;
+    }
+
+    .leftcol img {
+        height: 70px;
+        width: 70px;
+        padding: 20px;
+    }
+
+    .free-quote button {
+        width: 250px;
+        height: 60px;
         font-size: 17px;
     }
 }
