@@ -186,6 +186,46 @@ button:active {
     transition: all .3s ease-in-out;
 }
 
+/* Contact Us Page ______________________________________________________ */
+
+.contactUsPage {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 5%;
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    font-size: 17px;
+    text-align: left;
+}
+
+.h2 {
+    margin-bottom: 45px;
+    font-size: 27px;
+}
+
+.tel1 {
+    margin-bottom: 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.tel2 {
+    margin-bottom: 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.email {
+    margin-bottom: 45px;
+    font-size: 20px;
+}
+
+.quote {
+    font-size: 27px;
+}
+
 /* MEDIA QUERY: SMARTPHONE _______________________________________________*/
 
 @media screen and (max-width: 600px) {
