@@ -38,9 +38,9 @@ body {
 }
 
 .openingPage {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -131,9 +131,9 @@ button:active {
 
 /* Our Work Page __________________________________________________________*/
 .ourWorkPage {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
     margin-top: auto;
     padding: 50px;
     width: 550px;
@@ -189,15 +189,40 @@ button:active {
 /* Contact Us Page ______________________________________________________ */
 
 .contactUsPage {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
     margin-top: 5%;
-    height: 500px;
+    height: 480px;
     width: 400px;
     padding: 20px;
     font-size: 17px;
     text-align: left;
+    position: relative;
+}
+
+.contactUsImg {
+    height: 150px;
+    width: 150px;
+    background-color: rgba(44, 62, 80, 0.9);
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.table {
+    height: 120px;
+    width: 400px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.grid {
+    width: 33%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 2px;
 }
 
 .h2 {
@@ -224,6 +249,10 @@ button:active {
 
 .quote {
     font-size: 27px;
+}
+
+i {
+    padding-right: 15px;
 }
 
 /* MEDIA QUERY: SMARTPHONE _______________________________________________*/
@@ -272,6 +301,30 @@ button:active {
         width: 200px;
         height: 50px;
         font-size: 15px;
+    }
+
+    /* Contact Us page */
+    .contactUsPage {
+        height: 400px;
+        width: 300px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .contactUsPage img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .table {
+        height: 80px;
+        width: 300px;
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .quote {
+        font-size: 20px;
     }
 }
 
