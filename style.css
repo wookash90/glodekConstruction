@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
 /* Colours */
 
 :root {
@@ -7,7 +8,7 @@
     --buttons: #263544;
 }
 
-/* Main */
+/* Main __________________________________________________________________*/
 
 html {
     box-sizing: border-box;
@@ -25,7 +26,6 @@ body {
     background-size: cover;
     background-position: 70% 85%;
     background-attachment: fixed;
-    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -34,26 +34,20 @@ body {
 .content {
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100vw;
 }
 
-.openingPage {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-top: 10%;
-}
 
-/* Navigation */
+
+/* Navigation ____________________________________________________*/
 
 .nav {
-    position: fixed;
+    position: absolute;
+    top: 0;
     background: var(--navBackground);
     width: 100vw;
     margin: auto;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .navBar {
@@ -86,7 +80,20 @@ button:active {
     box-shadow: 0 0.1rem 30px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Image */
+/* Opening Page ______________________________________________________ */
+
+.openingPage {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    padding: 10px;
+    margin-top: 70px;
+    margin-bottom: 10%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    height: auto;
+    position: absolute;
+}
 
 .openingPage img {
     width: 300px;
@@ -96,8 +103,6 @@ button:active {
     background-color: rgba(44, 62, 80, 0.9);
 }
 
-/* Horizontal Division */
-
 .division2 {
     background-color: whitesmoke;
     height: 0.5px;
@@ -105,21 +110,15 @@ button:active {
     margin: auto;
 }
 
-/* Birmingham Builders */
-
 .text {
     margin: 5% 0 2% 0;
     font-size: 27px;
 }
 
-/* Paragraph */
-
 .paragraph {
     margin: 0 0 5% 0;
     font-size: 17px;   
 }
-
-/* Find out more */
 
 .findOutMore button {
     width: 130px;
@@ -130,14 +129,18 @@ button:active {
 }
 
 /* Our Work Page __________________________________________________________*/
+
 .ourWorkPage {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
-    margin-top: auto;
-    padding: 50px;
-    width: 550px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    top: 70px;
     height: auto;
+    position: absolute;
 }
 
 .leftcol {
@@ -192,13 +195,14 @@ button:active {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.8);
-    margin-top: 5%;
+    margin-top: 70px;
     height: 480px;
     width: 400px;
     padding: 20px;
     font-size: 17px;
     text-align: left;
     position: relative;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .contactUsImg {
@@ -257,11 +261,13 @@ i {
 
 /* MEDIA QUERY: SMARTPHONE _______________________________________________*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     
+    /* Opening Page */
+
     .openingPage img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 
     .openingPage {
@@ -292,8 +298,8 @@ i {
     }
 
     .leftcol img {
-        height: 50px;
-        width: 50px;
+        height: 80px;
+        width: 80px;
         padding: 10px;
     }
 
@@ -304,16 +310,25 @@ i {
     }
 
     /* Contact Us page */
+
     .contactUsPage {
         height: 400px;
-        width: 300px;
+        width: 290px;
         padding: 10px;
         font-size: 15px;
     }
+
+    .h2 {
+        font-size: 20px;
+    }
+
+    .email {
+        font-size: 17px;
+    }
     
     .contactUsPage img {
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
     }
 
     .table {
@@ -328,7 +343,7 @@ i {
     }
 }
 
-@media screen and (min-width: 601px) and  (max-width: 800px) {
+@media screen and (min-width: 451px) and  (max-width: 600px) {
     
     .openingPage img {
         width: 250px;
@@ -350,11 +365,11 @@ i {
     /* Our work page */
 
     .ourWorkPage {
-        width: 90%;
+        width: 70%;
     }
 
     .rightcol {
-        font-size: 17px;
+        font-size: 20px;
         padding-top: 25px;
     }
 
@@ -369,5 +384,56 @@ i {
         height: 60px;
         font-size: 17px;
     }
+
+    /* Contact Us Page */
+
+    .contactUsPage {
+        height: 400px;
+        width: 290px;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .h2 {
+        font-size: 20px;
+    }
+
+    .email {
+        font-size: 17px;
+    }
+    
+    .contactUsPage img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .table {
+        height: 80px;
+        width: 300px;
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
 }
 
+@media screen and (min-width: 601px) and  (max-width: 1000px) {
+
+    /* Our work page */
+
+    .ourWorkPage {
+        width: 60%;
+    }
+}
+
+/* Animation On Load ____________________________________________________ */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}

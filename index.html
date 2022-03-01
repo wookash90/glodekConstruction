@@ -14,9 +14,9 @@
     <!-- Nav bar -->
     <div class="nav">
         <div class="navBar">
-            <button class="home">Home</button>
-            <button class="ourWork">Our Work</button>
-            <button class="contactUs">Contact Us</button>
+            <button class="home" onclick="toggleOpeningPage()">Home</button>
+            <button class="ourWork" onclick="toggleOurWorkPage()">Our Work</button>
+            <button class="contactUs" onclick="toggleContactUsPage()">Contact Us</button>
         </div>
     </div>
 
@@ -24,7 +24,7 @@
     <div class="content">
 
         <!-- Opening page -->
-        <div class="openingPage" hidden>
+        <div class="openingPage">
             <!-- Logo -->
             <img src="img/logo/logo_transparent2 .png">
             <!-- Horizontal division -->
@@ -35,13 +35,12 @@
             <div class="paragraph">Over 15 years of experience in construction and renovation across Birmingham</div>
             <!-- Find Out More -->
             <div class="findOutMore">
-                <button>Find Out More</button>
+                <button onclick="toggleOurWorkPage()">Find Out More</button>
             </div>
         </div>
 
         <!-- Our Work page -->
         <div class="ourWorkPage">
-
             <div class="left-right">
                 <div class="leftcol">
                 <img src="img/gallery/colour/brick.JPG" class="thumbnail"></div>
@@ -99,12 +98,12 @@
                 <div class="clear"></div>
 
                 <div class="free-quote">
-                    <button>Contact us for a <strong>FREE</strong> quote</button>
+                    <button onclick="toggleContactUsPage()">Contact us for a <strong>FREE</strong> quote</button>
                 </div>
         </div>
 
         <!-- Contact Us -->
-        <div class="contactUsPage" hidden>
+        <div class="contactUsPage">
             <div class="h2"><h2>Contact Us:</h2></div>
             <img class="contactUsImg" src="img/logo/logo_transparent2 .png" alt="logo">
             <div class="tel1"><i class="fa-solid fa-phone"></i><span>07946 780649</span></div>
