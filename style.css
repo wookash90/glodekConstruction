@@ -156,6 +156,16 @@ button:active {
     border-radius: 20px;
 }
 
+.thumbnail:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:400px;
+    height:300px;
+    display:block;
+    transition: all .5s ease-out;
+}
+
 .rightcol {
     float: left;
     width: 80%;
@@ -178,16 +188,6 @@ button:active {
     height: 65px;
     font-size: 20px;
     margin: 20px;
-}
-
-.thumbnail:hover {
-    position:relative;
-    top:-25px;
-    left:-35px;
-    width:400px;
-    height:auto;
-    display:block;
-    transition: all .3s ease-in-out;
 }
 
 /* Contact Us Page ______________________________________________________ */
@@ -217,11 +217,19 @@ button:active {
     right: 10px;
 }
 
-.table {
+#table {
     height: 120px;
     width: 400px;
     display: flex;
     margin-top: 20px;
+    opacity: 0;
+    animation: fade 5s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0; }
+    25%, 50%, 70% { opacity: 1; }
 }
 
 #grid1 {
@@ -345,11 +353,12 @@ i {
         width: 90px;
     }
 
-    .table {
+    #table {
         height: 80px;
         width: 300px;
         display: flex;
         margin-top: 5px;
+        opacity: 1;
     }
 
     .quote {
@@ -421,7 +430,7 @@ i {
         width: 90px;
     }
 
-    .table {
+    #table {
         height: 80px;
         width: 300px;
         display: flex;
